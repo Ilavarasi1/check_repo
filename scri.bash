@@ -9,4 +9,4 @@ export GIT_COMMITTER_EMAIL=anon@localhost
 git clone https://github.com/markusstocker/pynpf-d4science.git
 
 # clean up as host script doesn't do so yet
-rm scri.sh
+rm scri.bash
