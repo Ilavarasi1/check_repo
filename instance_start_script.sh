@@ -22,7 +22,9 @@ echo "***********************"
 pwd
 ls -lah
 
+
 if [ ! -z "$AUTODOWNLOAD_URL" ]; then
+    '''
     # custom target filename
     if [ ! -z "$AUTODOWNLOAD_FILENAME" ]; then
         echo "Downloading $AUTODOWNLOAD_URL to $AUTODOWNLOAD_FILENAME"
@@ -31,6 +33,10 @@ if [ ! -z "$AUTODOWNLOAD_URL" ]; then
         echo "Downloading $AUTODOWNLOAD_URL"
         wget -N "$AUTODOWNLOAD_URL"
     fi
+    '''
+    echo "exec file is $AUTODOWNLOAD_EXEC"
+    echo "exec_bg file is $AUTODOWNLOAD_EXEC_BG"
+
     # execution if desired
     if [ ! -z "$AUTODOWNLOAD_EXEC" ]; then
         chmod u+x $AUTODOWNLOAD_EXEC
